@@ -1,4 +1,4 @@
-package com.example.pousadaviladascores.Main;
+package com.example.pousadaviladascores.UI;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
