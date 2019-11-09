@@ -8,8 +8,9 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <TextView
             android:id="@+id/textViewAppName"
@@ -21,12 +22,6 @@
             android:text="@string/pousada_name"
             android:textSize="24sp" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            app:layout_scrollFlags="scroll|enterAlways"></androidx.appcompat.widget.Toolbar>
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
@@ -37,21 +32,22 @@
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tab_text_1" />
+                android:layout_height="wrap_content"></com.google.android.material.tabs.TabItem>
+            <!--                android:text="@string/tab_text_1" />-->
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tab_text_2" />
+                android:layout_height="wrap_content"></com.google.android.material.tabs.TabItem>
+            <!--                android:text="@string/tab_text_2" />-->
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tab_text_3" />
+                android:layout_height="wrap_content"></com.google.android.material.tabs.TabItem>
+            <!--                android:text="@string/tab_text_3" />-->
         </com.google.android.material.tabs.TabLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

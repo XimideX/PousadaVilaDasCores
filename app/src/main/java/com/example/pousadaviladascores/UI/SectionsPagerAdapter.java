@@ -1,5 +1,7 @@
 package com.example.pousadaviladascores.UI;
 
+import android.content.Context;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -7,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.pousadaviladascores.Activities.Tab1Pagina_Inicial;
 import com.example.pousadaviladascores.Activities.Tab2Apartamentos;
 import com.example.pousadaviladascores.Activities.Tab3ItensDeApartamentos;
+import com.example.pousadaviladascores.R;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -18,10 +21,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     //private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
     //private final Context mContext;
     private static int tab_count;
+    private Context mContext;
 
-    public SectionsPagerAdapter(FragmentManager fm, int tab_count) {
+    public SectionsPagerAdapter(FragmentManager fm, int tab_count, Context context) {
         super(fm);
-        //mContext = context;
+        mContext = context;
         this.tab_count = tab_count;
     }
 
@@ -49,11 +53,20 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         }
     }
 
-//    @Nullable
-//    @Override
-//    public CharSequence getPageTitle(int position) {
-//        return mContext.getResources().getString(TAB_TITLES[position]);
-//    }
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position)
+        {
+            case 0:
+                return mContext.getString(R.string.tab_text_1);
+            case 1:
+                return mContext.getString(R.string.tab_text_2);
+            case 2:
+                return mContext.getString(R.string.tab_text_3);
+            default:
+                return null;
+        }
+    }
 
     @Override
     public int getCount()

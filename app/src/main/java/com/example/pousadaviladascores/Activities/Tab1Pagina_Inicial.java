@@ -11,6 +11,8 @@ import com.example.pousadaviladascores.R;
 
 public class Tab1Pagina_Inicial extends Fragment {
 
+    public Tab1Pagina_Inicial(){}
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {

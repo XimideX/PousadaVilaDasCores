@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity  implements TabLayout.OnTabS
 
         //Initializing page adapter
         //OBS: In Android, Adapter is a bridge between UI component and data source that helps us to fill data in UI component.
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(), this);
 
         //Sets a PagerAdapter that will supply views for this pager as needed
         viewPager.setAdapter(sectionsPagerAdapter);
