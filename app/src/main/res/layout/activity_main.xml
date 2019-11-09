@@ -35,27 +35,27 @@
             app:tabIndicatorColor="@color/colorAccent"
             app:tabMode="fixed">
 
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:id="@+id/tab1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/tab_text_1" />-->
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_text_1" />
 
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:id="@+id/tab2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/tab_text_2" />-->
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_text_2" />
 
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:id="@+id/tab3"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/tab_text_3" />-->
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_text_3" />
         </com.google.android.material.tabs.TabLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <FrameLayout
+        <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="612dp"

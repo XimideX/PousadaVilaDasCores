@@ -11,6 +11,13 @@ import com.example.pousadaviladascores.R;
 
 public class Tab3ItensDeApartamentos extends Fragment {
 
+    public Tab3ItensDeApartamentos(){}
+
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {

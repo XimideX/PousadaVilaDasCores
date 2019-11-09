@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
 //        tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_text_1), true);
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_text_2));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_text_3));
+//        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_text_1), true);
+//        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_text_2));
+//        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_text_3));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
         {
@@ -61,12 +61,15 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         fragment = new Tab1Pagina_Inicial();
                         replaceFragment(fragment);
+                        break;
                     case 1:
                         fragment = new Tab2Apartamentos();
                         replaceFragment(fragment);
+                        break;
                     case 2:
                         fragment = new Tab3ItensDeApartamentos();
                         replaceFragment(fragment);
+                        break;
                 }
 
             }
@@ -103,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Replaces an existing fragment that was added to a container.
         fragmentTransaction.replace(R.id.frameLayout, fragment);
-        //fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
     }
 }

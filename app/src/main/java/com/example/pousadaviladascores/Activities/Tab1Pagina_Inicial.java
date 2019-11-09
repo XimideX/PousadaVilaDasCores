@@ -11,6 +11,13 @@ import com.example.pousadaviladascores.R;
 
 public class Tab1Pagina_Inicial extends Fragment {
 
+    public Tab1Pagina_Inicial() {}
+
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
