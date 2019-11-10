@@ -1,0 +1,16 @@
+1 - Activities Classe Tab1Pagina_inicial -> Cria um package "tabs" e cria as classes: PaginaInicial (sem _) e o restante, da mesma forma. Até porque você criou uma classe ItensDeApartamento sem "_" pra quê colocar _ na outra, então? Vamos manter padrões.
+
+2 - Classe SectionsPagerAdpater -> line 20 to 22, retirar os comentários. Toda vez que for fazer o último commit correto do seu código, a não ser que seja um //TODO, retirar os comentários lixos do código.
+
+3 - Classe SectionsPagerAdpater -> line 23, manter variáveis começando por letra minúscula e depois Cammel Case. Sem "_".
+
+4 - Classe SectionsPagerAdpater -> line 40, criar nome das variáveis mais detalhados, fáceis de entender as referências. "tab1", "tab2" eh muito genérico para exemplifcar o nome de uma tab predefinida no projeto.
+
+5 - Classe MainActitity -> modificar o nome para condizer com a tela inicial, ou seja lá o que ela representar.
+
+6 - strings.xml -> linha 3 a 5, modificar o nome das strings para nomes mais detalhados, fáceis de entender as referências. Mesma ideia do item 4.
+
+
+
+
+Deletar MainActivity sem uso.
