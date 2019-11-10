@@ -10,11 +10,9 @@ import com.example.pousadaviladascores.UI.SectionsPagerAdapter;
 import com.example.pousadaviladascores.R;
 import com.google.android.material.tabs.TabLayout;
 
-public class MainActivity extends AppCompatActivity  implements TabLayout.OnTabSelectedListener {
+public class LauncherMenuActivity extends AppCompatActivity {
 
     SqlAccess sqlAccess;
-
-    //Declaring TabLayout and ViewPager
     TabLayout tabLayout;
     ViewPager viewPager;
 
@@ -22,41 +20,20 @@ public class MainActivity extends AppCompatActivity  implements TabLayout.OnTabS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.launcher_menu);
         sqlAccess = new SqlAccess(this);
-
-        //Initializing TabLayout
         tabLayout = findViewById(R.id.tabLayout);
-
-        //Initializing viewPager
+        populatesTabLayoutWithTabs(tabLayout);
         viewPager = findViewById(R.id.view_pager);
-
-        //Initializing page adapter
-        //OBS: In Android, Adapter is a bridge between UI component and data source that helps us to fill data in UI component.
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(), this);
-
-        //Sets a PagerAdapter that will supply views for this pager as needed
         viewPager.setAdapter(sectionsPagerAdapter);
-
         tabLayout.setupWithViewPager(viewPager);
-
     }
 
-    @Override
-    public void onTabSelected(TabLayout.Tab tab) {
-        viewPager.setCurrentItem(tab.getPosition());
-
-    }
-
-    @Override
-    public void onTabUnselected(TabLayout.Tab tab) {
-
-    }
-
-    @Override
-    public void onTabReselected(TabLayout.Tab tab) {
-
+    private void populatesTabLayoutWithTabs(TabLayout tabLayout){
+        for (int i = 0; i<3; i++){
+            tabLayout.addTab(tabLayout.newTab());
+        }
     }
 
     @Override

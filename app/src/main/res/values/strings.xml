@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">PousadaVilaDasCores</string>
-        <string name="tab_text_1">Página Inicial</string>
-        <string name="tab_text_2">Apartamentos</string>
-        <string name="tab_text_3">Itens de Apartamentos</string>
-        <string name="button">Button</string>
+        <string name="tab1_title_Pagina_Inicial">Página Inicial</string>
+        <string name="tab2_title_Apartamentos">Apartamentos</string>
+        <string name="tab3_title_Itens_de_Apartamentos">Itens de Apartamentos</string>
         <string name="pousada_name">Vila das Cores e Flores</string>
 </resources>

@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.pousadaviladascores.Activities.Tab1Pagina_Inicial;
-import com.example.pousadaviladascores.Activities.Tab2Apartamentos;
-import com.example.pousadaviladascores.Activities.Tab3ItensDeApartamentos;
+import com.example.pousadaviladascores.Tabs.Tab1PaginaInicial;
+import com.example.pousadaviladascores.Tabs.Tab2Apartamentos;
+import com.example.pousadaviladascores.Tabs.Tab3ItensDeApartamentos;
 import com.example.pousadaviladascores.R;
 
 /**
@@ -17,36 +17,28 @@ import com.example.pousadaviladascores.R;
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-    //@StringRes
-    //private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
-    //private final Context mContext;
     private static int tab_count;
-    private Context mContext;
+    private Context context;
 
     public SectionsPagerAdapter(FragmentManager fm, int tab_count, Context context) {
         super(fm);
-        mContext = context;
+        this.context = context;
         this.tab_count = tab_count;
     }
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        //return PlaceholderFragment.newInstance(position + 1);
+
         switch (position)
         {
             case 0:
-                Tab1Pagina_Inicial tab1 = new Tab1Pagina_Inicial();
-                return tab1;
+                return new Tab1PaginaInicial();
 
             case 1:
-                Tab2Apartamentos tab2 = new Tab2Apartamentos();
-                return tab2;
+                return new Tab2Apartamentos();
 
             case 2:
-                Tab3ItensDeApartamentos tab3 = new Tab3ItensDeApartamentos();
-                return tab3;
+                return new Tab3ItensDeApartamentos();
 
              default:
                  return null;
@@ -58,11 +50,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         switch (position)
         {
             case 0:
-                return mContext.getString(R.string.tab_text_1);
+                return context.getString(R.string.tab1_title_Pagina_Inicial);
             case 1:
-                return mContext.getString(R.string.tab_text_2);
+                return context.getString(R.string.tab2_title_Apartamentos);
             case 2:
-                return mContext.getString(R.string.tab_text_3);
+                return context.getString(R.string.tab3_title_Itens_de_Apartamentos);
             default:
                 return null;
         }
