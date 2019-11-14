@@ -1,7 +1,21 @@
-1 - Activities Classe Tab1Pagina_inicial -> Cria um package "tabs" e cria as classes: PaginaInicial (sem _) e o restante, da mesma forma. Até porque você criou uma classe ItensDeApartamento sem "_" pra quê colocar _ na outra, então? Vamos manter padrões.
+﻿1 - Activities Classe Tab1Pagina_inicial -> Cria um package "tabs" e cria as classes: PaginaInicial (sem _) e o restante, da mesma forma. Até porque você criou uma classe ItensDeApartamento sem "_" pra quê colocar _ na outra, então? Vamos manter padrões.
+	R: Tab1Pagina_Inicial modificado para Tab1PaginaInicial em commit anterior. Modificado novamente neste commit (vide 	   item2)
 
-Você criou o novo package e renomeou os nomes, mas continua sendo tab1, tab2, tab3... e se no futuro essas tabs tiverem outra ordem? E já que o package eh tabs, para quê manter tab1, eu já sei que é uma tab... (acredito que de resto esteja ok)
+2 - Você criou o novo package e renomeou os nomes, mas continua sendo tab1, tab2, tab3... e se no futuro essas tabs tiverem outra ordem? E já que o package eh tabs, para quê manter tab1, eu já sei que é uma tab... (acredito que de resto esteja ok)
+	R: Classe Tab1PaginaInicial renomeada para PaginaInicial
+	   Classe Tab2Apartamentos renomeada para Apartamentos
+	   Classe Tab3ItensDeApartamentos renomeada para ItensDeApartamentos
 
 3 - Classe SectionsPagerAdpater -> line 20, manter variáveis começando por letra minúscula e depois Cammel Case. Sem "_".
+	R: Classe SectionsPagerAdpater -> line 20: tab_count renomeada para tabCount
 
-Colocar números para as tabs, seja para classes ou variáveis, ou strings de xml não é uma ideia muito legal se pensarmos em manutenção. Se for para deixar algum nome de tab, não ordene-as, apenas nomei-as.
+4 - Colocar números para as tabs, seja para classes ou variáveis, ou strings de xml não é uma ideia muito legal se pensarmos em manutenção. Se for para deixar algum nome de tab, não ordene-as, apenas nomei-as.
+	R: Layouts modificados:
+	   	tab1_fragment_pagina_inicial.xml renomeado para tab_fragment_pagina_inicial.xml
+		tab2_fragment_apartamentos.xml renomeado para tab_fragment_apartamentos.xml
+		tab3_fragment_itens_de_apartamentos.xml renomeado para tab_fragment_itens_de_apartamentos.xml
+
+	   string.xml string resources modificados:
+		tab1_title_Pagina_Inicial modificado para tab_title_Pagina_Inicial
+		tab2_title_Apartamentos modificado para tab_title_Apartamentos
+		tab3_title_Itens_de_Apartamentos moficado para tab3_title_Itens_de_Apartamentos

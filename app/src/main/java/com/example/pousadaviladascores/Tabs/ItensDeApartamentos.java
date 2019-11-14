@@ -9,13 +9,13 @@ import androidx.fragment.app.Fragment;
 
 import com.example.pousadaviladascores.R;
 
-public class Tab2Apartamentos extends Fragment {
+public class ItensDeApartamentos extends Fragment {
 
-    public Tab2Apartamentos(){}
+    public ItensDeApartamentos(){}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        return inflater.inflate(R.layout.tab2_fragment_apartamentos, container, false);
+        return inflater.inflate(R.layout.tab_fragment_itens_de_apartamentos, container, false);
     }
 }
